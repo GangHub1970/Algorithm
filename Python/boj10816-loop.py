@@ -19,8 +19,6 @@ def upper(target, start, end):
 
     return start
 
-        
-
 n = int(input())
 nums = list(map(int, input().split()))
 nums.sort()
