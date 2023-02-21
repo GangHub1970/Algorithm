@@ -2,10 +2,11 @@ def binary_search(target, start, end):
     if start > end:
         return 0
     
-    if target > nums[(start + end) // 2]:
-        return binary_search(target, (start + end) // 2 + 1, end)
-    elif target < nums[(start + end) // 2]:
-        return binary_search(target, start, (start + end) // 2 - 1)
+    mid = (start + end) // 2
+    if target > nums[mid]:
+        return binary_search(target, mid + 1, end)
+    elif target < nums[mid]:
+        return binary_search(target, start, mid - 1)
     else:
         return 1
 
